@@ -8,6 +8,8 @@
     <p>Welcome to my first website.</p>
     <h2>Web Security</h2>
     <p id="web-security-question">How would you advise a potential client to secure his/her website from web security attacks? Note: the word count for your answer should not be greater than 250 words</p>
-    <p id="web-security-answer">My answer..... soon to come ;-)</p>
+    <p id="web-security-answer">I would advise my client to make sure the website contains protection against Cross-site scripting by removing any markup that can contain instructions to run code. If the website is using a SQL database in the backend it is important to escape any harmful characters that the user inputs so that the possibility to change or damage the database is not there. I would also scan the website for any know security issues by using a website vulnerability scanner.
+        If the website uses any third-part applications or code make sure it can be trusted. You might want to some research before implementing it. So that you can be 100% sure that its is legit. This is also very important when choosing a hosting platform. Only use a hosting platform that is well known and can be trusted. Data could be corrupted from the hosting platform. There are many serious hosting platforms out there, but there are also some not so serious ones so it is important that you do your research. Also use continuous deployment/integration which is an automated process of integrating and delivering code to your production environment. Most CI/CD runs the code against some sort of security check to see if the code is safe to deliver to production. Any changes that does not pass the test are flagged. This helps with catching oversights from the developer and helps maintain the code.
+    </p>
   </body>
 </html>
