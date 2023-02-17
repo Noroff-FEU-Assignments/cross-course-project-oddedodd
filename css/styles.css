@@ -1,0 +1,20 @@
+/* 
+* css variables
+*/
+:root {
+    --base-orange: #D17B0F;
+    --base-dark-blue: #1B203D;
+    --base-dark-grey: #1A1A1A; 
+}
+
+/*
+* body styles
+*/
+body {
+    margin: 0;
+    background-color: var(--base-dark-blue);
+}
+
+/*
+* header and navigation
+*/
