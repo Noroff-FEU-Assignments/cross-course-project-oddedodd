@@ -8,13 +8,253 @@
 }
 
 /*
+* simple reset
+*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*
 * body styles
 */
 body {
-    margin: 0;
     background-color: var(--base-dark-blue);
+    font-family: proxima-nova, sans-serif;
+    color: #fff;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: proxima-nova, sans-serif;
 }
 
 /*
 * header and navigation
 */
+header {
+    background-color: var(--base-orange);
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    z-index: 9;
+}
+
+.nav-link {
+    transition: 0.3s ease-out;
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-item a {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar-container {
+    max-width: 1224px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+* top area main page
+*/
+
+
+#hero {
+    background-color: #1A1A1A;
+    height: 60vh;
+    width: 100%;
+    background-image: url('../images/bg_main.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 20px;
+}
+
+#hero h1 { 
+    font-size: 2.5em;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+#hero p.subtitle {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+ 
+#hero .highlighted-text {
+    color: var(--base-orange);
+}
+
+#hero .card {
+    background-color: rgba(0,0,0,0.6);
+}
+
+/*
+* featured games sidescroller
+*/
+.featured-games-title-container {
+    display: flex;
+    position: relative;
+    left: 40px;
+    max-width: 1224px;
+    margin: 40px auto 0;
+    gap: 10px;
+}
+.featured-games-title-container i {
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+.featured-games-title-container h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 1224px;
+    margin: auto;
+}
+
+.featured-game {
+    flex: 0 0 auto;
+    display: flex;
+    width: 400px;
+    justify-items: center;
+    align-items: center;
+    min-height: 240px;
+    padding: 20px;
+    position: relative;
+    left: 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.featured-game-description h4 {
+    text-transform: uppercase;
+}
+.featured-game-description {
+    color: #fff;
+}
+.btn-read-more {
+    background-color: var(--base-orange);
+    color: #fff;
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/*
+* media queries 
+*/
+@media(min-width:1024px){
+    .scrolling-wrapper {
+        overflow: hidden;
+    }
+    .featured-game,
+    .featured-games-title-container {
+        left: 0;
+    }
+}
+/*
+* navigation is not mobile first... I just find it easier this way
+*/
+@media(max-width:1024px){
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        /* height: calc(100vh - 70px); */
+        top: 70px;
+        left:-100%;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--base-orange);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
