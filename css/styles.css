@@ -148,7 +148,8 @@ li {
 /*
 * featured games sidescroller
 */
-.featured-games-title-container {
+.featured-games-title-container,
+.trending-games-title-container {
     display: flex;
     position: relative;
     left: 40px;
@@ -156,11 +157,18 @@ li {
     margin: 40px auto 0;
     gap: 10px;
 }
-.featured-games-title-container i {
+.featured-games-title-container i,
+.trending-games-title-container i {
     font-size: 1.3em;
     line-height: 1.4;
 }
-.featured-games-title-container h3 {
+
+.trending-games-title-container i {
+    color: var(--base-orange);
+}
+
+.featured-games-title-container h3,
+.trending-games-title-container h3 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -213,7 +221,8 @@ li {
         overflow: hidden;
     }
     .featured-game,
-    .featured-games-title-container {
+    .featured-games-title-container,
+    .trending-games-title-container {
         left: 0;
     }
 }
