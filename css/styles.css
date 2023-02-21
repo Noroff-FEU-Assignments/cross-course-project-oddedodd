@@ -24,12 +24,16 @@ body {
     color: #fff;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
-  }
+}
 
 h1,h2,h3,h4,h5,h6 {
     font-family: proxima-nova, sans-serif;
+}
+
+.highlighted-text {
+    color: var(--base-orange);
 }
 
 /*
@@ -137,10 +141,6 @@ li {
     text-transform: uppercase;
 }
  
-#hero .highlighted-text {
-    color: var(--base-orange);
-}
-
 #hero .card {
     background-color: rgba(0,0,0,0.6);
 }
@@ -151,11 +151,9 @@ li {
 .featured-games-title-container,
 .trending-games-title-container {
     display: flex;
-    position: relative;
-    left: 40px;
+    padding-left: 40px;
     max-width: 1224px;
     margin: 40px auto 0;
-    gap: 10px;
 }
 .featured-games-title-container i,
 .trending-games-title-container i {
@@ -171,15 +169,21 @@ li {
 .trending-games-title-container h3 {
     font-weight: 300;
     text-transform: uppercase;
+    margin-left: 10px;
 }
 
 .scrolling-wrapper {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    /* -webkit-overflow-scrolling: touch; */
     max-width: 1224px;
     margin: auto;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .featured-game {
@@ -193,6 +197,20 @@ li {
     position: relative;
     left: 40px;
     border-radius: 10px;
+    margin-right: 10px;
+}
+
+.trending-game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 290px;
+    flex: 0 0 auto;
+    justify-items: center;
+    align-items: center;
+    width: 140px;
+    top: 10px;
+    left: 40px;
     margin-right: 10px;
 }
 
@@ -213,6 +231,21 @@ li {
     text-transform: uppercase;
 }
 
+#homepage-call-to-action {
+    display: flex;
+    height: 250px;
+    background-color: #000;
+    background-image: url('../images/bg_cta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
 /*
 * media queries 
 */
@@ -221,9 +254,16 @@ li {
         overflow: hidden;
     }
     .featured-game,
-    .featured-games-title-container,
-    .trending-games-title-container {
+    .featured-games-title-container {
         left: 0;
+    }
+    .trending-game {
+        width: 180px;
+    }
+
+    #homepage-call-to-action {
+        height: 400px;
+        margin-top: 30px;
     }
 }
 /*
