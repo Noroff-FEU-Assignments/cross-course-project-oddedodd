@@ -114,12 +114,9 @@ li {
 }
 
 .overlay {
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.4);
-    padding-top: 20px;
 }
 
 #hero h1 { 
@@ -220,30 +217,83 @@ li {
 .featured-game-description {
     color: #fff;
 }
-.btn-read-more {
+.btn-read-more,
+.btn-browse-games {
     background-color: var(--base-orange);
     color: #fff;
     padding: 5px;
-    width: 100%;
     margin-top: 5px;
     border: 0;
     border-radius: 5px;
     text-transform: uppercase;
 }
 
+.btn-read-more {
+    width: 100%;
+}
+
 #homepage-call-to-action {
-    display: flex;
     height: 250px;
     background-color: #000;
     background-image: url('../images/bg_cta.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
+}
+
+#homepage-call-to-action > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(27,32,51,0.65);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#homepage-call-to-action h2 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+#homepage-call-to-action h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.5em;
+
+}
+
+footer {
+    background-color: var(--base-dark-grey);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-logo-negative {
+    width: 150px;
+}
+
+footer > .container {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+.some-container {
+    border: 1px solid #fff;
+}
+
+img.footer-some-logo {
+    width: 30px;
 }
 
 /*

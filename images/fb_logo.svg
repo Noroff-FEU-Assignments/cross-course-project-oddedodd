@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31 31">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4eded;
+      }
+
+      .cls-2 {
+        stroke: #f4eded;
+        stroke-miterlimit: 10;
+        stroke-width: 1.74px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-3" width="31" height="31"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-4">
+      <g id="Mask_Group_6" data-name="Mask Group 6">
+        <g id="_ÎÓÈ_1" data-name=" ÎÓÈ 1">
+          <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-2" x=".91" y=".91" width="29.51" height="29.51" rx="6.22" ry="6.22"/>
+          <g id="Group_19" data-name="Group 19">
+            <path id="Path_80" data-name="Path 80" class="cls-1" d="m24.52,14.28h-13.51v4.72h12.9l.61-4.72Z"/>
+            <path id="Path_81" data-name="Path 81" class="cls-1" d="m15.05,10.12v20.29h4.72V11.03c0-1.21.98-2.19,2.19-2.19h2.62v-4.33h-3.86c-1.49-.01-2.92.56-3.99,1.6-.17.17-.33.34-.47.52-.79.99-1.21,2.23-1.2,3.49h0Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

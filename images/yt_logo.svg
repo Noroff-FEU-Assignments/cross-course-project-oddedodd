@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31 31">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #f4eded;
+      }
+
+      .cls-3 {
+        stroke: #f4eded;
+        stroke-miterlimit: 10;
+        stroke-width: 1.74px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-4" width="31" height="31"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-5">
+      <g id="Mask_Group_9" data-name="Mask Group 9">
+        <g id="_ÎÓÈ_1-4" data-name=" ÎÓÈ 1-4">
+          <rect id="Rectangle_30" data-name="Rectangle 30" class="cls-3" x=".9" y="1.12" width="29.33" height="29.33" rx="6.22" ry="6.22"/>
+          <path id="Path_84" data-name="Path 84" class="cls-2" d="m25.22,18.11c0,2.43-.83,4.41-3.26,4.41h-12.52c-2.43,0-3.53-1.97-3.53-4.41v-4.66c0-2.44.99-4.41,3.42-4.41h12.73c2.43,0,3.16,1.97,3.16,4.41v4.66h0Z"/>
+          <path id="Path_85" data-name="Path 85" class="cls-1" d="m13.63,13.14l5.26,2.75-5.26,2.74v-5.49Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
