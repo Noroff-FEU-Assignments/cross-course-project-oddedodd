@@ -709,6 +709,7 @@ img.footer-some-logo {
     }
     .order-content {
         max-width: 1024px;
+        margin: auto;
         display: flex;
         flex-direction: row-reverse;
         gap: 50px;
