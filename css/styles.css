@@ -714,6 +714,10 @@ img.footer-some-logo {
         flex-direction: row-reverse;
         gap: 50px;
     }
+    .order-success-content {
+        max-width: 1024px;
+        margin: auto;
+    }
 
 }
 /*
