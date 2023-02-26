@@ -154,7 +154,7 @@ li {
 */
 #hero {
     background-color: #1A1A1A;
-    height: 60vh;
+    height: 65vh;
     width: 100%;
     background-image: url('../images/bg_main.jpg');
     background-size: cover;
@@ -615,6 +615,13 @@ button:hover {
     max-width: 250px;
 }
 
+.mobile-info p {
+    margin-top: 5px;
+    text-align: center;
+    font-style: italic;
+    color: #f1f1f1;
+}
+
 /*
 *   FOOTER
 */
@@ -652,6 +659,9 @@ img.footer-some-logo {
 * MEDIA QUERIES
 */
 @media(min-width:1024px){
+    .mobile-info {
+        display: none;
+    }
     .hero-title {
         padding-top: 60px;
     }
