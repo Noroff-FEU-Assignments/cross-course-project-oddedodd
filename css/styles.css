@@ -28,7 +28,9 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/* TYPOGRAPHY */
+/* 
+*   TYPOGRAPHY 
+*/
 h1,h2,h3,h4,h5,h6 {
     font-family: proxima-nova, sans-serif;
     text-transform: uppercase;
@@ -51,7 +53,9 @@ hr {
     font-weight: 700;
 }
 
-/* IMAGES */
+/* 
+*   IMAGES 
+*/
 .image-round {
     display: block;
     border-radius: 100%;
@@ -66,7 +70,6 @@ hr {
     margin-right: auto;
     width: 50%;
   }
-
 
 /*
 * HEADER AND NAVIGATION
@@ -145,11 +148,10 @@ li {
     color: #fff;
 }
 
+
 /*
 * MAIN PAGE 
 */
-
-
 #hero {
     background-color: #1A1A1A;
     height: 60vh;
@@ -191,6 +193,10 @@ li {
     background-color: rgba(0,0,0,0.6);
 }
 
+/*
+*   GAMES 
+*/
+
 #games-hero {
     background-color: #1A1A1A;
     height: 30vh;
@@ -226,6 +232,10 @@ li {
     font-weight: 300;
     text-transform: uppercase;
 }
+
+/*
+*   ABOUT
+*/
 
 #about-hero {
     background-color: #1A1A1A;
@@ -276,8 +286,6 @@ li {
 .about-us-content p {
     margin-bottom: 20px;
 }
-
-
 
 /* CONTACT PAGE */
 #contact-hero {
@@ -425,10 +433,10 @@ li {
     padding: 15px;
 }
 
-
 button:hover {
     cursor: pointer;
 }
+
 /*
 * featured games sidescroller
 */
@@ -509,6 +517,9 @@ button:hover {
     color: #fff;
 }
 
+/*
+* MAIN PAGE - CENTER CALL TO ACTION AREA 
+*/
 #homepage-call-to-action {
     height: 250px;
     background-color: #000;
@@ -553,6 +564,9 @@ button:hover {
     justify-content: center;
 }
 
+/*
+* GAME PRESENTATION
+*/
 .game {
     display: flex;
     width: 160px;
@@ -601,7 +615,9 @@ button:hover {
     max-width: 250px;
 }
 
-
+/*
+*   FOOTER
+*/
 footer {
     background-color: var(--base-dark-grey);
     padding: 30px 20px;
@@ -633,7 +649,7 @@ img.footer-some-logo {
 }
 
 /*
-* media queries 
+* MEDIA QUERIES
 */
 @media(min-width:1024px){
     .scrolling-wrapper {
@@ -646,7 +662,6 @@ img.footer-some-logo {
     .trending-game {
         width: 180px;
     }
-
     #homepage-call-to-action {
         height: 400px;
         margin-top: 30px;
@@ -695,7 +710,6 @@ img.footer-some-logo {
         flex-direction: row-reverse;
         gap: 50px;
     }
-
 
 }
 /*
