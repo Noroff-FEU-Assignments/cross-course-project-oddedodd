@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">¨
+    <meta name="description" content="GameHub - place order">
     <title>Order Game - GameHub</title>
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/rbp0qda.css">
     <script src="https://kit.fontawesome.com/1f00ba1d90.js" crossorigin="anonymous"></script>
@@ -54,23 +54,37 @@
                 </div>
             </div> 
         </section>
-        <section class="main-content">
-            <div class="col1">
-                <h2>Get in touch with us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu nisi ut leo eleifend lobortis vel ut dolor. Mauris ac hendrerit lectus, nec pulvinar risus. Nunc bibendum sodales lectus, id sodales quam ultrices a.</p>
-                <div class="contact-form">
-                    <label for="name"hidden>Name</label>
-                    <input type="text" name="name" id="name" placeholder="name...">
-                    <label for="email"hidden>E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="email...">
-                    <label for="message"hidden>Message</label>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="message..."></textarea>
-                    <button class="btn-browse-games">Send message</button>
-                </div>
-            </div>
-            <div class="col2">
-                <img src="images/contact_us.jpg" alt="A boy playing computer games" class="image-round">
-            </div>
+        <section class="order-content">
+          <div class="game-container">
+            <img src="images/games/cyberpunk.jpg" alt="Cyberpunk game" class="image-center" />
+            <p>Cyberpunk</p>
+          </div>
+          <div class="order-form">
+            <h3>Billing information</h3>
+            <label for="name"hidden>Name</label>
+            <input type="text" name="name" id="name" placeholder="name...">
+            <label for="email"hidden>E-mail</label>
+            <input type="email" name="email" id="email" placeholder="email...">
+            <label for="address"hidden>Address</label>
+            <input type="address" name="address" id="addresss" placeholder="address...">
+            <label for="zipcode" hidden>Zipcode</label>
+            <input type="text" name="zipcode" id="zipcode" placeholder="zipcode...">
+            <label for="city" hidden>City</label>
+            <input type="text" name="city" id="city" placeholder="city...">
+            <label for="country" hidden>Country</label>
+            <input type="text" name="country" id="country" placeholder="country...">
+            <hr>
+            <h3>Payment information</h3>
+            <label for="creditcardnumber" hidden>Credit card number</label>
+            <input type="text" name="creditcardnumber" id="creditcardnumber" placeholder="card nr...">
+            <label for="cardholder" hidden>Card holder</label>
+            <input type="text" name="cardholder" id="cardholder" placeholder="cardholder name..."">
+            <label for="expiredate" hidden>Expiration date</label>
+            <input type="text" name="expiredate" id="expiredate" placeholder="expiration date (dd.mm.yy)...">
+            <label for="ccv" hidden>CCV</label>
+            <input type="text" name="ccv" id="ccv" placeholder="ccv...">
+            <a href="success.html"><button class="btn-place-order">place order</button></a> 
+        </div>
         </section>
     </main>
     <footer>

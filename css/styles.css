@@ -28,9 +28,20 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+/* TYPOGRAPHY */
 h1,h2,h3,h4,h5,h6 {
     font-family: proxima-nova, sans-serif;
     text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+hr {
+    margin: 20px 0;
+    border: 2px solid #fff;
 }
 
 .highlighted-text {
@@ -40,16 +51,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
 }
 
-.main-content {
-    padding: 25px;
-}
-
-.main-content h2,
-.main-content h3,
-.main-content p {
-    margin-bottom: 15px;
-}
-
+/* IMAGES */
 .image-round {
     display: block;
     border-radius: 100%;
@@ -58,9 +60,16 @@ h1,h2,h3,h4,h5,h6 {
     margin: 20px auto 20px auto;
 }
 
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
 
 /*
-* header and navigation
+* HEADER AND NAVIGATION
 */
 header {
     background-color: var(--base-orange);
@@ -137,7 +146,7 @@ li {
 }
 
 /*
-* top area main page
+* MAIN PAGE 
 */
 
 
@@ -151,20 +160,22 @@ li {
 }
 
 .overlay {
-    /* padding-top: 50px; */
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
 }
 
-#hero h1 { 
+.hero-title {
+    padding-top: 10px;
+}
+
+.hero-title h1 { 
     font-size: 2.5em;
     font-weight: 300;
     font-style: normal;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-
 }
 
 #hero p.subtitle {
@@ -301,14 +312,8 @@ li {
     text-transform: uppercase;
 }
 
-.contact-form input,
-.contact-form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 5px;
-    border: 0;
-    border-radius: 5px;
+.main-content {
+    padding: 25px;
 }
 
 /* ORDER PAGE */
@@ -329,10 +334,67 @@ li {
     border-bottom-right-radius: 20px;
 }
 
+.order-content {
+    padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-content .game-container {
+    padding-top: 25px;
+    background-color: rgba(0,0,0,0.6);
+    width: 300px;
+    border-radius: 25px;
+}
+
+.order-content .game-container p {
+    text-align: center;
+    margin: 20px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ORDER SUCCESS PAGE */
+.order-success-content {
+    padding: 25px;
+    min-height: 80vh;
+}
+.confirmation-message {
+    background-color: rgba(0,0,0,0.6);
+    padding: 25px;
+    text-align: center;
+    border-radius: 25px;
+}
+.confirmation-message i {
+    font-size: 3.5em;
+}
+
+/* FORM STYLES */
+.order-form input,
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.order-form input:focus,
 .contact-form input:focus,
 .contact-form textarea:focus {
     background-color: var(--base-orange);
 }
+
+.order-form input:focus::placeholder,
 .contact-form input:focus::placeholder,
 .contact-form textarea:focus::placeholder {
     color: #fff;
@@ -342,6 +404,31 @@ li {
     text-transform: uppercase;
 }
 
+.btn,
+.btn-place-order,
+.btn-read-more,
+.btn-browse-games {
+    background-color: var(--base-orange);
+    color: #fff;
+    padding: 5px;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.btn-read-more {
+    width: 100%;
+}
+
+.btn-place-order {
+    padding: 15px;
+}
+
+
+button:hover {
+    cursor: pointer;
+}
 /*
 * featured games sidescroller
 */
@@ -420,24 +507,6 @@ li {
 }
 .featured-game-description {
     color: #fff;
-}
-.btn-read-more,
-.btn-browse-games {
-    background-color: var(--base-orange);
-    color: #fff;
-    padding: 5px;
-    margin-top: 5px;
-    border: 0;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.btn-read-more {
-    width: 100%;
-}
-
-button:hover {
-    cursor: pointer;
 }
 
 #homepage-call-to-action {
@@ -619,6 +688,12 @@ img.footer-some-logo {
     }
     .about-us-content .title-description {
         width: 50%
+    }
+    .order-content {
+        max-width: 1024px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 50px;
     }
 
 
