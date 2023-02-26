@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My first website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>GameHub - The Universe of Games</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rbp0qda.css">
+    <script src="https://kit.fontawesome.com/1f00ba1d90.js" crossorigin="anonymous"></script>
   </head>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://use.typekit.net/rbp0qda.css">
-  <script src="https://kit.fontawesome.com/1f00ba1d90.js" crossorigin="anonymous"></script>
   <body>
     <header>
       <div class="navbar-container">
@@ -17,21 +19,21 @@
 
           <ul class="nav-menu">
             <li class="nav-item">
-              <a href="" class="nav-link">Home</a>
+              <a href="#" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Games</a>
+              <a href="games.html" class="nav-link">Games</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">About</a>
+              <a href="about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Contact</a>
+              <a href="contact.html" class="nav-link">Contact</a>
             </li>
             <li class="nav-item">
-              SEARCHBAR
+              <input type="text" name="search" placeholder="Search for games">
             </li>
-              Shoppingcart & profile-link
+              &nbsp;
             </li>
           </ul>
 
@@ -47,10 +49,11 @@
     <main>
       <section id="hero">
         <div class="overlay">
-          
-          <h1>Welcome</h1>
-          <p class="subtitle">To the universe of <span class="highlighted-text">games</span></p>
-            
+          <div class="hero-title">
+            <h1>Welcome</h1>
+            <p class="subtitle">To the universe of <span class="highlighted-text">games</span></p>
+          </div>
+
           <div class="featured-games-title-container">
             <i class="fa fa-diamond"></i> <h3 class="highlighted-text">Featured games</h3>
           </div>
@@ -63,7 +66,7 @@
               </div>
               <div class="featured-game-image">
                 <img src="images/games/cyberpunk.jpg" alt="Cyberpunk cover" />
-                <button class="btn-read-more">Learn more</button>
+                <a href="cyberpunk.html"><button class="btn-read-more">Learn more</button></a>
               </div>
             </div>
           
@@ -103,7 +106,7 @@
             
           <div class="card trending-game">
             <img src="images/games/cyberpunk.jpg" alt="Cyberpunk cover" />
-            <button class="btn-read-more">Learn more</button>
+            <a href="cyberpunk.html"><button class="btn-read-more">Learn more</button></a>
           </div>
         
           <div class="card trending-game">
@@ -117,17 +120,17 @@
           </div>
 
           <div class="card trending-game">
-            <img src="images/games/assasin.jpg" alt="Assasin cover" />
+            <img src="images/games/space_war.jpg" alt="Space War" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
           <div class="card trending-game">
-            <img src="images/games/assasin.jpg" alt="Assasin cover" />
+            <img src="images/games/furious.jpg" alt="Furious" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
           <div class="card trending-game">
-            <img src="images/games/assasin.jpg" alt="Assasin cover" />
+            <img src="images/games/black.jpg" alt="Black" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
@@ -139,62 +142,60 @@
           <div class="container">
             <h2 class="highlighted-text">Explore</h2>
             <h3>The universe of <span class="highlighted-text">games</span></h3>
-            <button class="btn-browse-games">browse games</button>
+            <a href="games.html"><button class="btn-browse-games">browse games</button></a>
           </div> 
       </section>
 
-      <section id="trending">
-        <div class="trending-games-title-container">
-          <span class="highlighted-text"><i class="fa fa-bolt"></i></span> <h3>Trending games</h3>
+      <section id="discount">
+        <div class="discount-games-title-container">
+          <span class="highlighted-text"><i class="fa fa-star" aria-hidden="true"></i></span> <h3>Games on sale</h3>
         </div>
 
         <div class="scrolling-wrapper">
             
-          <div class="card trending-game">
-            <img src="images/games/cyberpunk.jpg" alt="Cyberpunk cover" />
+          <div class="card discount-game">
+            <img src="images/games/super_duper.jpg" alt="Super Duper" />
             <button class="btn-read-more">Learn more</button>
           </div>
         
-          <div class="card trending-game">
-            <img src="images/games/forge_legend.jpg" alt="Forge Legend cover" />
+          <div class="card discount-game">
+            <img src="images/games/racing.jpg" alt="Racing" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
-          <div class="card trending-game">
-            <img src="images/games/assasin.jpg" alt="Assasin cover" />
+          <div class="card discount-game">
+            <img src="images/games/pingpong.jpg" alt="Ping Pong" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
-          <div class="card trending-game">
-            <img src="images/games/assasin.jpg" alt="Assasin cover" />
+          <div class="card discount-game">
+            <img src="images/games/space_war.jpg" alt="Space War" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
-          <div class="card trending-game">
-            <img src="images/games/assasin.jpg" alt="Assasin cover" />
+          <div class="card discount-game">
+            <img src="images/games/boxer.jpg" alt="Boxer" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
-          <div class="card trending-game">
-            <img src="images/games/assasin.jpg" alt="Assasin cover" />
+          <div class="card discount-game">
+            <img src="images/games/black.jpg" alt="Black" />
             <button class="btn-read-more">Learn more</button>
           </div>
 
         </div>
 <!--         <div style="height: 200px;""></div> -->
       </section>
-
-      <footer>
-        <img src="images/GameHub_Logo-negative.svg" alt="GamesHub Logo" class="brand-logo-negative" />
-        <div class="container">
-          <img src="images/fb_logo.svg" alt="Facebook Logo" class="footer-some-logo" />
-          <img src="images/instagram_logo.svg" alt="Instagram Logo" class="footer-some-logo" />
-          <img src="images/twitter_logo.svg" alt="Twitter Logo" class="footer-some-logo" />
-          <img src="images/yt_logo.svg" alt="YouTube Logo" class="footer-some-logo" />
-        </div>
-      </footer>
-
     </main>
+    <footer>
+      <img src="images/GameHub_Logo-negative.svg" alt="GamesHub Logo" class="brand-logo-negative" />
+      <div class="container">
+        <img src="images/fb_logo.svg" alt="Facebook Logo" class="footer-some-logo" />
+        <img src="images/instagram_logo.svg" alt="Instagram Logo" class="footer-some-logo" />
+        <img src="images/twitter_logo.svg" alt="Twitter Logo" class="footer-some-logo" />
+        <img src="images/yt_logo.svg" alt="YouTube Logo" class="footer-some-logo" />
+      </div>
+    </footer>
     <script src="js/app.js"></script>
   </body>
 </html>

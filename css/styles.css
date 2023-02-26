@@ -16,7 +16,7 @@
 }
 
 /*
-* body styles
+* GLOBAL STYLES
 */
 body {
     background-color: var(--base-dark-blue);
@@ -30,11 +30,34 @@ body::-webkit-scrollbar {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: proxima-nova, sans-serif;
+    text-transform: uppercase;
 }
 
 .highlighted-text {
     color: var(--base-orange);
 }
+.bold-text {
+    font-weight: 700;
+}
+
+.main-content {
+    padding: 25px;
+}
+
+.main-content h2,
+.main-content h3,
+.main-content p {
+    margin-bottom: 15px;
+}
+
+.image-round {
+    display: block;
+    border-radius: 100%;
+    width: 80%;
+    border: 2px solid #fff;
+    margin: 20px auto 20px auto;
+}
+
 
 /*
 * header and navigation
@@ -99,6 +122,20 @@ li {
     margin: 0 auto;
 }
 
+.nav-menu input[type="text"]{
+    text-align: center;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.nav-menu input[type="text"]:focus {
+    background-color: var(--base-dark-blue);
+    color: #fff;
+}
+.nav-menu input[type="text"]:focus::placeholder {
+    color: #fff;
+}
+
 /*
 * top area main page
 */
@@ -114,6 +151,7 @@ li {
 }
 
 .overlay {
+    /* padding-top: 50px; */
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.4);
@@ -142,18 +180,182 @@ li {
     background-color: rgba(0,0,0,0.6);
 }
 
+#games-hero {
+    background-color: #1A1A1A;
+    height: 30vh;
+    width: 100%;
+    background-image: url('../images/bg_games.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#games-hero .overlay {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.games-hero-title {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.games-hero-title h1 {
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.games-hero-title p {
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#about-hero {
+    background-color: #1A1A1A;
+    height: 30vh;
+    width: 100%;
+    background-image: url('../images/bg_about.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#about-hero .overlay {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.about-hero-title {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-title h1 {
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.about-hero-title p {
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.about-us-content {
+    padding: 25px;
+}
+
+.about-us-content h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-us-content p {
+    margin-bottom: 20px;
+}
+
+
+
+/* CONTACT PAGE */
+#contact-hero {
+    background-color: #1A1A1A;
+    height: 30vh;
+    width: 100%;
+    background-image: url('../images/bg_contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#contact-hero .overlay {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.contact-hero-title {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-title h1 {
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* ORDER PAGE */
+#order-hero {
+    background-color: #1A1A1A;
+    height: 30vh;
+    width: 100%;
+    background-image: url('../images/bg_order.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#order-hero .overlay {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: var(--base-orange);
+}
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+    color: #fff;
+}
+
+::placeholder {
+    text-transform: uppercase;
+}
+
 /*
 * featured games sidescroller
 */
 .featured-games-title-container,
-.trending-games-title-container {
+.trending-games-title-container,
+.discount-games-title-container {
     display: flex;
     padding-left: 40px;
     max-width: 1224px;
     margin: 40px auto 0;
 }
 .featured-games-title-container i,
-.trending-games-title-container i {
+.trending-games-title-container i,
+.discount-games-title-container i {
     font-size: 1.3em;
     line-height: 1.4;
 }
@@ -163,7 +365,8 @@ li {
 }
 
 .featured-games-title-container h3,
-.trending-games-title-container h3 {
+.trending-games-title-container h3,
+.discount-games-title-container h3 {
     font-weight: 300;
     text-transform: uppercase;
     margin-left: 10px;
@@ -174,7 +377,7 @@ li {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    /* -webkit-overflow-scrolling: touch; */
+    -webkit-overflow-scrolling: touch;
     max-width: 1224px;
     margin: auto;
 }
@@ -197,7 +400,8 @@ li {
     margin-right: 10px;
 }
 
-.trending-game {
+.trending-game,
+.discount-game {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -230,6 +434,10 @@ li {
 
 .btn-read-more {
     width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 #homepage-call-to-action {
@@ -265,6 +473,65 @@ li {
     font-size: 1.5em;
 
 }
+
+.games-list {
+    display: flex;
+    padding: 0 25px 0 25px;
+    max-width: 1224px;
+    margin: 40px auto 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game {
+    display: flex;
+    width: 160px;
+    flex-direction: column;
+}
+
+.game-presentation {
+    background-image: url(../images/bg_main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.the-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.the-game h1 {
+    font-size: 2.4em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.the-game p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.the-game .price {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.the-game img {
+    max-width: 250px;
+}
+
 
 footer {
     background-color: var(--base-dark-grey);
@@ -315,6 +582,46 @@ img.footer-some-logo {
         height: 400px;
         margin-top: 30px;
     }
+    .game-presentation {
+        flex-direction: wrap;
+        align-items: center;
+        padding-top: 0;
+    }
+    .the-game {
+        flex-direction: row;
+        gap: 10px;
+        max-height: 500px; /* This should be solved better. If a game has a very long description there wil be overflow.... */
+    }
+    .the-game h1,
+    .the-game p {
+        text-align: left;
+    } 
+    .main-content {
+        max-width: 1224px;
+        display: flex;
+        margin: auto;
+        gap:20px;
+    }
+    .main-content .col2 {
+        display: flex;
+        align-items: center;
+    }
+    .about-us-content {
+        max-width: 1224px;
+        margin: auto;
+        position: relative;
+    }
+    .about-us-content img {
+        position: absolute;
+        right: 0;
+        width: 40%;
+        top: 100px;
+    }
+    .about-us-content .title-description {
+        width: 50%
+    }
+
+
 }
 /*
 * navigation is not mobile first... I just find it easier this way
