@@ -653,7 +653,7 @@ img.footer-some-logo {
 */
 @media(min-width:1024px){
     .hero-title {
-        padding-top: 50px;
+        padding-top: 60px;
     }
     .scrolling-wrapper {
         overflow: hidden;
