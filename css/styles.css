@@ -437,6 +437,11 @@ button:hover {
     cursor: pointer;
 }
 
+a.btn-read-more {
+    text-align: center;
+    text-decoration: none;
+}
+
 /*
 * featured games sidescroller
 */
