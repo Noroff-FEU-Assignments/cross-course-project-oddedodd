@@ -1,6 +1,8 @@
 const apiUrl = "https://api.noroff.dev/api/v1/gamehub/";
 const gamesContainer = document.querySelector(".games-list");
 
+
+
 async function getAllGames() {
 
     try {
@@ -29,6 +31,8 @@ async function getAllGames() {
     } catch (error) {
         console.error("An error occurred:", error);
     } 
+
+
    
 }
 

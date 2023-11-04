@@ -28,6 +28,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+img.loader {
+    width: 40px;
+}
+
 /* 
 *   TYPOGRAPHY 
 */
@@ -440,6 +444,8 @@ button:hover {
 a.btn-read-more {
     text-align: center;
     text-decoration: none;
+    display: block;
+    margin-top: 10px;
 }
 
 /*
@@ -498,6 +504,7 @@ a.btn-read-more {
     left: 40px;
     border-radius: 10px;
     margin-right: 10px;
+    gap: 20px;
 }
 
 .trending-game,
@@ -521,7 +528,9 @@ a.btn-read-more {
 .featured-game-description {
     color: #fff;
 }
-
+.featured-game-image {
+    max-width: 150px;
+}
 /*
 * MAIN PAGE - CENTER CALL TO ACTION AREA 
 */
