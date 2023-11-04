@@ -41,6 +41,10 @@ h1,h2,h3,h4,h5,h6 {
     margin-bottom: 15px;
 }
 
+h2.onsale {
+    color: var(--base-orange);
+}
+
 p {
     margin-bottom: 15px;
 }
