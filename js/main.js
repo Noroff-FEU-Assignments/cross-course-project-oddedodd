@@ -1,114 +1,71 @@
-const apiUrl = "https://api.noroff.dev/api/v1/gamehub/";
+import { connectToApi, apiUrl } from "./api.js";
 
 const featuredGamesContainer = document.querySelector(".scrolling-wrapper");
-const trendingGamesContainer = document.querySelector(".trending-games-container");
-const discountGamesContainer = document.querySelector(".discount-games-container");
+const trendingGamesContainer = document.querySelector(
+  ".trending-games-container"
+);
+const discountGamesContainer = document.querySelector(
+  ".discount-games-container"
+);
 
+/**
+ *  Get the featured games and display them on the page - tag 22 is the "featured" tag in WordPress backend.
+ */
 async function getFeaturedGames() {
-
-    try {
-        const response = await fetch(apiUrl);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-    const games = await response.json();
-
+  connectToApi(apiUrl + "?tag=22").then((games) => {
     let gamesTemplate = "";
-
-    for(let i = 0; i < games.length; i++) {
-
-        if(!games[i].favorite) {
-            continue;
-        }
-
-         gamesTemplate += `
+    for (let i = 0; i < games.length; i++) {
+      gamesTemplate += `
             <div class="card featured-game">
               <div class="featured-game-description">
-                <h4>${games[i].title}</h4>
+                <h4>${games[i].name}</h4>
                 <p>${games[i].description}</p>
               </div>
               <div class="featured-game-image">
-              <img src="${games[i].image}" alt="${games[i].title}" />
+              <img src="${games[i].images[0].src}" alt="${games[i].name}" />
                 <a href="displaygame.html?id=${games[i].id}" class="btn-read-more">Learn more</a>
               </div>
             </div>
             `;
     }
-
     featuredGamesContainer.innerHTML = gamesTemplate;
-
-    } catch (error) {
-        console.error("An error occurred:", error);
-    } 
-   
+  });
 }
 
+/**
+ *  Get the trending games and display them on the page - tag 23 is the "trending" tag in WordPress backend.
+ */
 async function getTrendingGames() {
-
-    try {
-        const response = await fetch(apiUrl);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-    const games = await response.json();
-
+  connectToApi(apiUrl + "?tag=23").then((games) => {
     let gamesTemplate = "";
-
-    for(let i = 0; i < 6; i++) { // only display 6 games
-
-         gamesTemplate += `
+    for (let i = 0; i < games.length; i++) {
+      gamesTemplate += `
             <div class="card trending-game">
-                <img src="${games[i].image}" alt="${games[i].title}" />
+                <img src="${games[i].images[0].src}" alt="${games[i].name}" />
                 <a href="displaygame.html?id=${games[i].id}" class="btn-read-more">Learn more</a>
             </div>
             `;
     }
-
     trendingGamesContainer.innerHTML = gamesTemplate;
-
-    } catch (error) {
-        console.error("An error occurred:", error);
-    } 
-
+  });
 }
 
-async function getOnsaleGames() {   
-
-    try {
-        const response = await fetch(apiUrl);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-    const games = await response.json();
-
+/**
+ *  Get the games on sale and display them on the page
+ */
+async function getOnsaleGames() {
+  connectToApi(apiUrl + "?on_sale=true").then((games) => {
     let gamesTemplate = "";
-
-    for(let i = 0; i < games.length; i++) {
-
-        if(!games[i].onSale) {
-            continue;
-        }
-
-        gamesTemplate += `
+    for (let i = 0; i < games.length; i++) {
+      gamesTemplate += `
             <div class="card discount-game">
-            <img src="${games[i].image}" alt="${games[i].title}" />
+            <img src="${games[i].images[0].src}" alt="${games[i].name}" />
             <a href="displaygame.html?id=${games[i].id}" class="btn-read-more">Learn more</a>
             </div>
             `;
     }
-
     discountGamesContainer.innerHTML = gamesTemplate;
-
-    } catch (error) {
-        console.error("An error occurred:", error);
-    } 
-
+  });
 }
 
 getFeaturedGames();
