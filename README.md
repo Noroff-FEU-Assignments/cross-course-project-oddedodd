@@ -40,7 +40,7 @@ cd your-folder
 2. Clone the repo
 
 ```sh
-git clone https://github.com/oddedodd/noroff-semester-project-01
+git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-oddedodd
 ```
 
 3. Change The APIURLs in the css/api.js file to match your WordPress installs (local and production)
